@@ -1,0 +1,19 @@
+<p>nnav works!</p>
+{{classe}}
+<div [style.backgroundColor]="color">this is my fav color</div>
+<input type="text" [(ngModel)]="color">
+<input type="submit" value="change color" (click)="changeColor()">
+<div *ngFor="let p of listProdcut">
+<!-- <div *ngIf="p.quantity!=0"> -->
+    {{p.id}}
+    {{p.title}}
+    {{p.price}}
+    {{p.quantity}}
+    {{p.like}}
+    <input type="submit" value="buy" [disabled]="p.quantity==0">
+<!-- </div> -->
+<!-- <div *ngIf="p.quantity==0">
+<input type="submit" value="buy" disabled></div>
+<div *ngIf="p.quantity!=0">
+    <input type="submit" value="buy" ></div> -->
+</div>

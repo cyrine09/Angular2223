@@ -1,0 +1,16 @@
+{{titre}}<br>
+<div  *ngFor="let a of listeArticles" >
+<div class="cl" [ngStyle]="{'color':a.categorie=='Education'?'blue':''}">
+Titre: {{a.titre}}<br>
+Auteur: {{a.auteur}}<br>
+Categorie: {{a.categorie}}<br>
+Contenu: {{a.contenu}}<br>
+Date: {{a.date}}<br>
+</div><br><br> </div>
+
+
+  <div>
+    <input type="text" value="{{ listeArticles.length }} articles affichés">
+  </div>
+  
+  

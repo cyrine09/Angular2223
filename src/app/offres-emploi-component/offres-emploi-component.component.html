@@ -1,0 +1,13 @@
+<div *ngFor="let a of listeEmploi">
+    {{ a.id}}
+    {{ a.libelle}}
+    {{ a.etat}}
+<input type="submit" value="postuler" [disabled]="a.etat==false">
+<br>
+
+
+</div>
+<input type="submit" value="calculer" (click)="calc()"><br>
+{{somme}}<br>
+<input type="text"  (input)="recherEmploi($event)" >
+<!-- <div>{{copyList}}</div> -->
