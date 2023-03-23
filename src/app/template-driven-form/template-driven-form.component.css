@@ -1,0 +1,14 @@
+.cl1{
+    width: 700px;
+    margin: auto;
+    align-self: center;
+}
+.cl2{
+    width: 500px;
+    align-self: center;
+    margin: auto;
+}
+input.ng-invalid.ng-touched{
+    border:  2px solid red;
+  
+}

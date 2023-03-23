@@ -17,3 +17,11 @@
 <div *ngIf="p.quantity!=0">
     <input type="submit" value="buy" ></div> -->
 </div>
+<div *ngFor="let p of listProdcut">
+    <div [ngStyle]="{'backgroundColor':p.quantity==0?'red':'green'}">
+    {{p.id}}
+    {{p.title}}
+    {{p.price}}
+    {{p.quantity}}
+    {{p.like}}
+</div> </div>

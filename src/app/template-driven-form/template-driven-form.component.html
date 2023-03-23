@@ -1,0 +1,25 @@
+<div class="card border-dark cl1">
+
+    <form #f="ngForm">
+
+        <label>Nom </label>
+        <input type="text" name='nom' ngModel required #t="ngModel"><br><br>
+        <label>Email </label>
+        <input type="text" name="email" ngModel required #t="ngModel" [email]="true"
+            pattern="[a-zA-Z0-9._%+-]+\.[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3}">
+        <br><br>
+        <div class="card border-dark cl2">
+            <form #b="ngForm">
+                <label>Type de carte </label>
+                <input type="text" name="tcarte" ngModel required #t="ngModel"><br><br>
+                <label>Numéro de carte </label>
+                <input type="text" name="ncarte" ngModel required #t="ngModel" maxlength="16"><br><br>
+                <label>Date d'expiration </label>
+                <input type="text" name="dte_exp" ngModel required #t="ngModel"><br><br>
+                <label>Code </label>
+                <input type="text" name="code" ngModel #t="ngModel" [hidden]="b.invalid ">
+            </form>
+        </div><br>
+        <input type="submit" class="btn btn-info" value="Ajouter" (click)="showForm(t)" [disabled]="f.invalid">
+    </form>
+</div>
